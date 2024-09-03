@@ -1,0 +1,32 @@
+﻿<h3 style="margin-top: 20px">Test Cases</h3>
+
+<p>Click on a test case to populate the form:</p>
+
+<ul style="list-style-type: none; padding: 0;">
+    <li style="margin-bottom: 3px;">
+        <button type="button" onclick="populateTestCase(10000, 10, 5, 500, 3000)">
+            Test Case 1: Z = 10000, Y1 = 10%, Y2 = 5%, Hours = 500, OtherAdsBudget = 3000
+        </button>
+        <span>Expected Output: 5,260.87</span>
+    </li>
+    <li style="margin-bottom: 3px;">
+        <button type="button" onclick="populateTestCase(15000, 15, 7, 800, 4000)">
+            Test Case 2: Z = 15000, Y1 = 15%, Y2 = 7%, Hours = 800, OtherAdsBudget = 4000
+        </button>
+        <span>Expected Output: 7,639.34</span>
+    </li>
+    <li style="margin-bottom: 3px;">
+        <button type="button" onclick="populateTestCase(20000, 12, 6, 1000, 5000)">
+            Test Case 3: Z = 20000, Y1 = 12%, Y2 = 6%, Hours = 1000, OtherAdsBudget = 5000
+        </button>
+        <span>Expected Output: 11,101.69</span>
+    </li>
+</ul>
+
+<script type="text/javascript">function populateTestCase(z, y1, y2, hours, otherAdsBudget) {
+        document.getElementById("Z").value = z;
+        document.getElementById("Y1").value = y1;
+        document.getElementById("Y2").value = y2;
+        document.getElementById("Hours").value = hours;
+        document.getElementById("OtherAdsBudget").value = otherAdsBudget;
+    }</script>

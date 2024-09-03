@@ -45,34 +45,4 @@
     <h3>The maximum budget for the specific ad is: @ViewBag.MaxAdBudget</h3>
 }
 
-<h3>Test Cases</h3>
-
-<p>Click on a test case to populate the form:</p>
-
-<ul>
-    <li>
-        <button type="button" onclick="populateTestCase(10000, 10, 5, 500, 3000)">
-            Test Case 1: Z = 10000, Y1 = 10%, Y2 = 5%, Hours = 500, OtherAdsBudget = 3000
-        </button>
-    </li>
-    <li>
-        <button type="button" onclick="populateTestCase(15000, 15, 7, 800, 4000)">
-            Test Case 2: Z = 15000, Y1 = 15%, Y2 = 7%, Hours = 800, OtherAdsBudget = 4000
-        </button>
-    </li>
-    <li>
-        <button type="button" onclick="populateTestCase(20000, 12, 6, 1000, 5000)">
-            Test Case 3: Z = 20000, Y1 = 12%, Y2 = 6%, Hours = 1000, OtherAdsBudget = 5000
-        </button>
-    </li>
-</ul>
-
-@section Scripts {
-    <script type="text/javascript">function populateTestCase(z, y1, y2, hours, otherAdsBudget) {
-            document.getElementById("Z").value = z;
-            document.getElementById("Y1").value = y1;
-            document.getElementById("Y2").value = y2;
-            document.getElementById("Hours").value = hours;
-            document.getElementById("OtherAdsBudget").value = otherAdsBudget;
-        }</script>
-}
+<partial name="_TestCases" /> <!-- Including the partial view -->
