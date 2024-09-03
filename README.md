@@ -69,7 +69,7 @@ This application is deployed to Azure App Service, which provides a scalable and
 To access the deployed application, follow these steps:
 **Go to [BudgetCalculatorJu](https://budgetcalculatorju.azurewebsites.net/)**
 
-## CLone to Your Local
+## Or Clone to Your Local
 
 ### Prerequisites
 
