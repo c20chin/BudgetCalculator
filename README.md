@@ -61,12 +61,13 @@ To find the maximum budget for the specific ad, we use a **binary search** algor
   - `BudgetServiceTests.cs`: Contains unit tests for the `GoalSeek` method.
 
 # Access the Application
+<img width="1398" alt="Screenshot 2024-09-03 at 16 07 21" src="https://github.com/user-attachments/assets/2b3d9498-ff68-42eb-a717-426bc2c3fd58">
 
-## Azure App Service Application URL
+## Web App URL
 
 This application is deployed to Azure App Service, which provides a scalable and managed environment for hosting web applications.
 To access the deployed application, follow these steps:
-Go to [BudgetCalculatorJu](https://budgetcalculatorju.azurewebsites.net/)
+**Go to [BudgetCalculatorJu](https://budgetcalculatorju.azurewebsites.net/)**
 
 ## CLone to Your Local
 
