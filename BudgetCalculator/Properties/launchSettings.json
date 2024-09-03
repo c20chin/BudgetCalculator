@@ -11,7 +11,7 @@
     "BudgetCalculator": {
       "commandName": "Project",
       "launchBrowser": true,
-      "applicationUrl": "https://localhost:7190;http://localhost:5033",
+      "applicationUrl": "http://localhost:44607",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },

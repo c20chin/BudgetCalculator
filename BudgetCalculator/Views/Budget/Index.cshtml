@@ -12,27 +12,27 @@
 
     <div>
         <label for="Z">Total Approved Budget (Z):</label>
-        @Html.TextBoxFor(m => m.Z, new { @class = "form-control", id = "Z" })
+        @Html.TextBoxFor(m => m.Z, new { @class = "form-control input-field", id = "Z" })
         @Html.ValidationMessageFor(m => m.Z, "", new { @class = "text-danger" })
     </div>
     <div>
         <label for="Y1">Agency Fee Percentage (Y1%):</label>
-        @Html.TextBoxFor(m => m.Y1, new { @class = "form-control", id = "Y1" })
+        @Html.TextBoxFor(m => m.Y1, new { @class = "form-control input-field", id = "Y1" })
         @Html.ValidationMessageFor(m => m.Y1, "", new { @class = "text-danger" })
     </div>
     <div>
         <label for="Y2">Third-party Tool Fee Percentage (Y2%):</label>
-        @Html.TextBoxFor(m => m.Y2, new { @class = "form-control", id = "Y2" })
+        @Html.TextBoxFor(m => m.Y2, new { @class = "form-control input-field", id = "Y2" })
         @Html.ValidationMessageFor(m => m.Y2, "", new { @class = "text-danger" })
     </div>
     <div>
         <label for="Hours">Fixed Cost for Agency Hours:</label>
-        @Html.TextBoxFor(m => m.Hours, new { @class = "form-control", id = "Hours" })
+        @Html.TextBoxFor(m => m.Hours, new { @class = "form-control input-field", id = "Hours" })
         @Html.ValidationMessageFor(m => m.Hours, "", new { @class = "text-danger" })
     </div>
     <div>
         <label for="OtherAdsBudget">Budget for Other Ads (X1 + X2 + ...):</label>
-        @Html.TextBoxFor(m => m.OtherAdsBudget, new { @class = "form-control", id = "OtherAdsBudget" })
+        @Html.TextBoxFor(m => m.OtherAdsBudget, new { @class = "form-control input-field", id = "OtherAdsBudget" })
         @Html.ValidationMessageFor(m => m.OtherAdsBudget, "", new { @class = "text-danger" })
     </div>
     <div style="margin-top: 5px;">
