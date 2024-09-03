@@ -16,6 +16,37 @@ The Budget Calculator project is a .NET application designed to calculate the ma
 - **xUnit**: Testing framework used for unit testing.
 - **ASP.NET Core MVC**: Web framework for building the user interface.
 
+## Original Formula
+```
+Z = X + Y1 * X + Y2 * (X1 + X2 + ... + Xi) + HOURS
+```
+The formula used to calculate the total campaign budget `Z` is:
+Where:
+- `X` is the total ad spend.
+- `Y1` is the agency fee percentage.
+- `Y2` is the third-party tool fee percentage.
+- `X1`, `X2`, `Xi` are the budgets for individual ads.
+- `HOURS` is the fixed cost for agency hours.
+
+In the context of the application:
+- `X` is split into `X_target` (budget for the specific ad) and `OtherAdsBudget` (budget for other ads).
+- `Y1` and `Y2` are percentages that apply to `X` and the sum of all ad budgets, respectively.
+- `HOURS` remains a fixed cost.
+
+## Algorithm
+
+To find the maximum budget for the specific ad, we use a **binary search** algorithm. This approach is used to iteratively adjust the budget for the specific ad until the total budget `Z` does not exceed the approved amount. 
+
+### Binary Search Method
+
+1. **Initialize Variables**: Set the initial low and high bounds for the binary search range.
+2. **Calculate Midpoint**: Compute the midpoint of the current range.
+3. **Calculate Total Cost**: Using the midpoint value, compute the total cost using the formula.
+4. **Adjust Range**: If the total cost is less than the approved budget `Z`, adjust the low bound. Otherwise, adjust the high bound.
+5. **Repeat**: Continue adjusting the range until the difference between the high and low bounds is within a specified tolerance.
+
+
+
 ## Project Structure
 
 - **BudgetCalculator**: Main project containing the business logic and controllers.
@@ -37,30 +68,29 @@ The Budget Calculator project is a .NET application designed to calculate the ma
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/yourusername/BudgetCalculator.git
+   git clone https://github.com/c20chin/BudgetCalculator.git
    cd BudgetCalculator
    ```
-Restore Dependencies
 
 2. **Navigate to the project directory and restore the dependencies:**
 
-bash
-Copy code
-dotnet restore
-Build the Solution
+    ```bash
+    dotnet restore
+    ```
 
 3. **Build the solution to ensure everything is set up correctly:**
 
-bash
-dotnet build
-Run the Application
+    ```bash
+    dotnet build
+    ```
 
-4. **Start the application:**
+4. **Run the application:**
 
-bash
-Copy code
-dotnet run --project BudgetCalculator
-Open a web browser and navigate to http://localhost:5000 to use the application.
+    ```bash
+    dotnet run --project BudgetCalculator
+    ```
+
+5. **Open a web browser and navigate to http://localhost:5000 to use the application.**
 
 ### Usage
 1. **Navigate to the Application**
@@ -69,25 +99,31 @@ Open a web browser and navigate to http://localhost:5000 to use the application.
 
 3. **Input Data**
 
-Total Budget (Z): Enter the approved total budget for the campaign.
-Agency Fee Percentage (Y1): Enter the agency fee percentage.
-Third-Party Tool Fee Percentage (Y2): Enter the third-party tool fee percentage.
-Fixed Costs (HOURS): Enter the fixed costs for agency hours.
-Budget for Other Ads: Enter the budget for other ads.
-Submit
+- **Total Budget (Z)**: Enter the approved total budget for the campaign.
+- **Agency Fee Percentage (Y1)**: Enter the agency fee percentage.
+- **Third-Party Tool Fee Percentage (Y2)**: Enter the third-party tool fee percentage.
+- **Fixed Costs (HOURS)**: Enter the fixed costs for agency hours.
+- **Budget for Other Ads**: Enter the budget for other ads.
 
+4. **Submit**
 Click the "Calculate" button to determine the maximum budget for the specific ad.
 
-Running Tests
+## Running Tests
 To ensure the application is working correctly, run the unit tests:
 
-Navigate to the Test Project
+1. **Navigate to the Test Project**
 
-bash
+```bash
 cd BudgetCalculator.Tests
-Run the Tests
+```
 
-bash
+2. **Run the Tests**
+
+```bash
 dotnet test
+```
+
 This will execute all the unit tests and display the results.
+
+
 
